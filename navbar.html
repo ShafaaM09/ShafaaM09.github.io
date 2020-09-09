@@ -24,6 +24,18 @@
             .navbar li:hover{
                 background-color:red;
             }
+            .dropdown-content li{
+                float:none;
+            }
+            .dropdown-content{
+                padding:0px;
+                background-color:black;
+                display:none;
+                position:absolute;
+            }
+            .dropdown:hover .dropdown-content{
+                display:block;
+            }
         </style>
     </head>
     <body>
@@ -32,7 +44,16 @@
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contactme.html">Contact Me</a></li>
             <li><a href="aboutme.html">About Me</a></li>
-            <li>Projects</li>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Project 1</a></li>
+                    <li><a href="#">Project 2</a></li>
+                    <li><a href="#">Project 3</a></li>
+                    <li><a href="#">Project 4</a></li>
+                    <li><a href="#">Project 5</a></li>
+                </ul>
+            </li>
         </ul>
 
         <h1>My First Heading</h1>
