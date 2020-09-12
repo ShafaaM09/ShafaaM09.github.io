@@ -15,9 +15,9 @@
                 color:black;
             }
             p,td{
-                padding: 10 px;
+                padding:2 px;
                 text-align: left;
-                font-size: 16.5px;
+                font-size: 18px;
                 font-family: "Times New Roman", Times, serif;
             }
             tr{
@@ -36,7 +36,7 @@
                 font-size:25px;
             }
             h1{
-                color:rgb(199,21,133); font-size:50px;
+                color:rgb(121, 113, 233); font-size:50px;
             }
             table, th, td {
                 border: 1px solid #000000;
