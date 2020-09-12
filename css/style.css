@@ -14,8 +14,11 @@
                 background-color:#FFFFFF;
                 color:black;
             }
-            td{
-               text-align:right 
+            p,td{
+                padding: 10 px;
+                text-align: left;
+                font-size: 16.5px;
+                font-family: "Times New Roman", Times, serif;
             }
             tr{
                 font-size:25px;
