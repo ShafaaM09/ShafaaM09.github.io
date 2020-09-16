@@ -71,5 +71,15 @@
                 padding-right:50px
             }
             li{
-                font-size: 12px;
+                font-size: 14px;
+            }
+            .right{
+                margin-left:auto;
+                width:80%;
+            }
+            .shift{
+                margin-top:100px;
+                width:35%;
+                height:auto;
+                float:left;
             }
