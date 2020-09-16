@@ -71,7 +71,7 @@
                 padding-right:50px
             }
             li{
-                font-size: 14px;
+                font-size: 18px;
             }
             .right{
                 margin-left:auto;
@@ -79,7 +79,13 @@
             }
             .shift{
                 margin-top:100px;
-                width:35%;
-                height:auto;
+                width:200px;
+                height:290px;
                 float:left;
+            }
+            .me{
+                font-size:25px;
+                color:black;
+                font-family:georgia;
+                overflow:hidden;
             }
