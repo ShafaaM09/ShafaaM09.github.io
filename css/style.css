@@ -74,18 +74,19 @@
                 font-size: 18px;
             }
             .right{
-                margin-left:auto;
-                width:80%;
+                width:1200px;
             }
             .shift{
-                margin-top:100px;
                 width:200px;
                 height:290px;
                 float:left;
+                padding-right: 50px;
             }
             .me{
                 font-size:25px;
                 color:black;
                 font-family:georgia;
                 overflow:hidden;
+                margin-left:auto;
+                padding:5px;
             }
