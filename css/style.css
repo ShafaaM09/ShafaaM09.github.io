@@ -13,12 +13,12 @@
             body{
                 background-color:#FFFFFF;
                 color:black;
+                font-family: "times";
             }
             p,td{
                 padding:0px;
                 text-align: left;
                 font-size: 18px;
-                font-family: "Times New Roman", Times, serif;
             }
             tr{
                 font-size:25px;
@@ -41,27 +41,6 @@
             table, th, td {
                 border: 1px solid #000000;
             }
-            .evenRow{
-                background-color:rgb(138,43,226);
-            }
-            .oddRow{
-                background-color:rgb(199,21,133);
-            }
-            .hobbies{
-                color:rgb(110,105,220);
-            }
-            .preDish{
-                color:#70ffdb;
-            }
-            .favBooks{
-                color:#fa6bf5;
-            }
-            .website{
-                color:#70e5ff;
-            }
-            .boutMe{
-                color:rgb(138,43,226);
-            }
             .center{
                 margin-left: auto;
                 margin-right: auto;
@@ -71,10 +50,10 @@
                 padding-right:50px
             }
             li{
-                font-size: 12px;
+                font-size: 19px;
             }
             .right{
-                width:1000px;
+                width:900px;
             }
             .shift{
                 width:270px;
@@ -85,8 +64,14 @@
             .me{
                 font-size:25px;
                 color:black;
-                font-family:georgia;
                 overflow:hidden;
                 margin-left:auto;
                 padding:5px;
+                font-weight: bold;
             }
+            .float {
+                float:right;
+                padding-right:50px
+            }
+
+            
