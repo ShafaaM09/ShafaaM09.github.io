@@ -11,7 +11,7 @@
                 cursor: pointer;
             }
             body{
-                background-color:#FFFFFF;
+                background-color:#ECD3FF;
                 color:black;
                 font-family: "times";
             }
@@ -36,7 +36,7 @@
                 font-size:25px;
             }
             h1{
-                color:rgb(121, 113, 233); font-size:50px;
+                color:black; font-size:50px;
             }
             table, th, td {
                 border: 1px solid #000000;
@@ -73,5 +73,6 @@
                 float:right;
                 padding-right:50px
             }
+            
 
             
