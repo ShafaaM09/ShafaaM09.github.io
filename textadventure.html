@@ -12,13 +12,16 @@
             right:0px;
             top:100px;
             bottom:0px;
-            background-color: purple;
+            background-color: red;
         }
         #left_pane{
-            background-color:lightblue;
+            background-color:blue;
             height: 100%;
             width: 56%;
             float: left;
+            display: flex;
+            align-items:center;
+            justify-content: center;
         }
         #right_pane{
             background-color: pink;
@@ -27,10 +30,30 @@
             float: left;
         }
         #story_text{
-                background-color: yellow;
-                height:80%;         
+                background-color: purple;
+                height:80%;  
+                font-weight:bold; 
+                color: white;      
         }
         #button_choices{
+                background-color: yellow;
+                height: 20%;
+        }
+        #story_img{
+            max-height: 92%;
+            max-width: 97%;
+            width: auto;
+            height: auto;
+        }
+        .buttons{
+            text-decoration:none;
+            color:white;
+            background-color:black;
+            padding:10px;
+            border-radius: 8px;
+            font-size:15px;
+            margin: 10px;
+            text-align:center;
 
         }
     </style>
@@ -54,10 +77,19 @@
         </ul>
 
         <div id="container">
-            <div id="left_pane"></div>
+            <div id="left_pane">
+                <img id= "story_img" src= "images/edu.jpg"/>
+            </div>
             <div id="right_pane">
-                <div id="story_text"></div>
-                <div id="button_choices"></div>
+                <div id="story_text">
+                    <p>Welcome to Celestraii</p>
+                    <p>It is the year 4031</p>
+                    <p>Do you like Ice Cream?</p>
+                </div>
+                <div id="button_choices">
+                    <a class="buttons" href ="">Yes</a>
+                    <a class="buttons" href ="">No</a>
+                </div>
             </div>
         </div>
 
