@@ -38,6 +38,8 @@
         #button_choices{
                 background-color: yellow;
                 height: 20%;
+                align-items:center;
+                justify-content: center;
         }
         #story_img{
             max-height: 92%;
@@ -54,6 +56,8 @@
             font-size:15px;
             margin: 10px;
             text-align:center;
+            align-items:center;
+            justify-content: center;
 
         }
     </style>
@@ -82,17 +86,40 @@
             </div>
             <div id="right_pane">
                 <div id="story_text">
-                    <p>Welcome to Celestraii</p>
-                    <p>It is the year 4031</p>
-                    <p>Do you like Ice Cream?</p>
+                    <p id='ptext1'></p>
+                    <p id='ptext2'></p>
+                    <p id='ptext3'></p>
+                    <p id='ptext4'></p>
+
                 </div>
                 <div id="button_choices">
-                    <a class="buttons" href ="">Yes</a>
-                    <a class="buttons" href ="">No</a>
+                    <a id="b1" class="buttons" href ="" onclick="bclick(1)">Yes</a>
+                    <a id="b2" class="buttons" href ="" onclick="bclick(2)">No</a>
                 </div>
             </div>
         </div>
 
 
+    <script>
+        var ptext1 = document.getElementById('ptext1');
+        var ptext2 = document.getElementById('ptext2');
+        var ptext3 = document.getElementById('ptext3');
+        var ptext4 = document.getElementById('ptext4');
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var img = document.getElementById("story_img");
+        var state = "intro";
+        intro();
+
+        function intro(){
+            img.src = "images/caraval.jpg";
+            ptext1.innerHTML="Welcome to Celestriaii";
+            ptext2.innerHTML="Are you ready to begin the adventure of a lifetime?";
+            ptext3.innerHTML="";
+            ptext4.innerHTML="";
+            b1.innerHTML = "Yes, of course!";
+            b2.innerHTML = "No, I'm too old";
+        }
+    </script>
     </body>
     <html>
