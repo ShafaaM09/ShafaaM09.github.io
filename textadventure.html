@@ -10,12 +10,11 @@
             position: absolute;
             left: 0px;
             right:0px;
-            top:100px;
+            top:70px;
             bottom:0px;
-            background-color: red;
         }
         #left_pane{
-            background-color:blue;
+            background-color:white;
             height: 100%;
             width: 56%;
             float: left;
@@ -24,25 +23,30 @@
             justify-content: center;
         }
         #right_pane{
-            background-color: pink;
+            background-color: purple;
             height:100%;
             width:44%;
             float: left;
         }
         #story_text{
-                background-color: purple;
-                height:80%;  
+                background-color: purple;  
                 font-weight:bold; 
-                color: white;      
+                color: white; 
+                position: absolute;
+                right: 0px; 
+                top: 0px; 
         }
         #button_choices{
-                background-color: yellow;
-                height: 20%;
+                background-color: purple;
+                position: absolute;
+                display:flex;
                 align-items:center;
                 justify-content: center;
+                bottom: 0px;
+                height: 200px;
         }
         #story_img{
-            max-height: 92%;
+            max-height: 97%;
             max-width: 97%;
             width: auto;
             height: auto;
@@ -55,10 +59,6 @@
             border-radius: 8px;
             font-size:15px;
             margin: 10px;
-            text-align:center;
-            align-items:center;
-            justify-content: center;
-
         }
     </style>
 
@@ -93,8 +93,8 @@
 
                 </div>
                 <div id="button_choices">
-                    <a id="b1" class="buttons" href ="" onclick="bclick(1)">Yes</a>
-                    <a id="b2" class="buttons" href ="" onclick="bclick(2)">No</a>
+                    <a id="b1" class="buttons" href ="#" onclick="bclick(1)">Yes</a>
+                    <a id="b2" class="buttons" href ="#" onclick="bclick(2)">No</a>
                 </div>
             </div>
         </div>
@@ -119,6 +119,49 @@
             ptext4.innerHTML="";
             b1.innerHTML = "Yes, of course!";
             b2.innerHTML = "No, I'm too old";
+        }
+
+        function stayInSchool(){
+            img.src = "images/refugee.jpg";
+            ptext1.innerHTML= "Begin training";
+            ptext2.innerHTML= "Meet other kids";
+            ptext3.innerHTML= "Would you like to escape?";
+            b1.innerHTML= "Yes";
+            b2.innerHTML= "No";
+        }
+        function escape(){
+            img.src = "images/cinder.jpg";
+            ptext1.innerHTML= "You have officially escaped!";
+            ptext2.innerHTML= "You are now in a cave, look for the one";
+            ptext3.innerHTML= "Join or Fight?";
+            b1.innerHTML= "Join";
+            b2.innerHTML= "Fight";
+        }
+       
+
+
+        /////State Machine
+        function bclick(button) {
+            if(state == "intro"){
+                if(button == 1){
+                    stayInSchool();
+                    state= "stayInSchool";
+                }
+                else if(button == 2){
+                    goToCamp();
+                    state= "goToCamp";
+                }
+            }
+            else if(state == "stayInSchool"){
+                if (button == 1){
+                    escape();
+                    state = "escape";
+                }
+                else if(button == 2){
+                    intenseTraining();
+                    state = "intenseTraining";
+                }
+            }
         }
     </script>
     </body>
