@@ -114,53 +114,140 @@
 
         function intro(){
             img.src = "images/caraval.jpg";
-            ptext1.innerHTML="Welcome to Celestriaii";
-            ptext2.innerHTML="Are you ready to begin the adventure of a lifetime?";
+            ptext1.innerHTML="While you are out on a trip to the store, you encounter a shiny necklace with a charm that looks like a C. You pick it up and suddenly you are transported Celestriaii, a planet in our galaxy.";
+            ptext2.innerHTML="Do you explore the planet or immediately walk up to a Celestrian, hoping to find a way home?";
             ptext3.innerHTML="";
             ptext4.innerHTML="";
-            b1.innerHTML = "Yes, of course!";
-            b2.innerHTML = "No, I'm too old";
+            b1.innerHTML = "Explore!";
+            b2.innerHTML = "Find Help!";
         }
 
-        function stayInSchool(){
+        function explore(){
             img.src = "images/refugee.jpg";
-            ptext1.innerHTML= "Begin training";
-            ptext2.innerHTML= "Meet other kids";
-            ptext3.innerHTML= "Would you like to escape?";
-            b1.innerHTML= "Yes";
-            b2.innerHTML= "No";
+            ptext1.innerHTML= "As you walk through the forest of Celestriaii, you feel as if there's someone watching you but brush it off. Suddenly, you spot a phoenix in the sky and it drops a scroll right on your head!";
+            ptext2.innerHTML= "Do you wish to open the scroll or follow the phoenix?";
+            ptext3.innerHTML= "";
+            b1.innerHTML= "Open the scroll";
+            b2.innerHTML= "Follow the phoenix";
         }
-        function escape(){
+        function followPhoenix(){
+            img.src = "images/refugee.jpg";
+            ptext1.innerHTML= "As you follow the phoenix, you become unaware of your environment and lose your footing. As you plummet to oblivion, you realize you should've went with the scroll. Try again next time!";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "";
+            b1.style.display= "none";
+            b2.style.display= "none";
+        }
+        function openScroll(){
             img.src = "images/cinder.jpg";
-            ptext1.innerHTML= "You have officially escaped!";
-            ptext2.innerHTML= "You are now in a cave, look for the one";
-            ptext3.innerHTML= "Join or Fight?";
-            b1.innerHTML= "Join";
-            b2.innerHTML= "Fight";
+            ptext1.innerHTML= "The scroll says: Release the one wrongfully in despair and find the one of true evil who's a hidden spare. The phoenix suddenly swoops down and keeps circling around you until you decide to follow it. The phoenix eventually leaves you at a hide out of some kind.";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "Do you stay and explore the hide out or weep forthe phoenix to come back?";
+            b1.innerHTML= "Explore";
+            b2.innerHTML= "Weep";
         }
-       
+        function exploreTwo(){
+            img.src = "images/cinder.jpg";
+            ptext1.innerHTML= "You realize that inside the hideout is a portal! Excited to see where it leads to, you step inside. The portal teleports you to the dungeons in the capital where you notice  a woman who wears a long garb in one of the cells.";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "Inquire about the lady in the garb or make your merry way down the dungeon?";
+            b1.innerHTML= "Inquire";
+            b2.innerHTML= "Keep Going";
+        }
+        function weep(){
+            img.src = "images/cinder.jpg";
+            ptext1.innerHTML= "The phoenix returns, shakes it's tiny head and leave you to cry as a coward. You're not the destined one. Better luck next time!";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "";
+            b1.style.display= "none";
+            b2.style.display= "none";
+        }
+        function inquire(){
+            img.src = "images/cinder.jpg";
+            ptext1.innerHTML= "You realize this lady is a Guardian, one of the protectors of the planet! She is indeed the one in wrongful despair. She informs you that her name is Maurii and Guardian Venoii banished her here because he wanted to get rid of any threat to his power. The Guardians are overjoyed to have Maurii back and strip Venoii of his status. You have fulfilled your destiny and restored piece!";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "";
+            b1.style.display= "none";
+            b2.style.display= "none";
+        }
+        function keepGoing(){
+            img.src = "images/cinder.jpg";
+            ptext1.innerHTML= "You keep walking through the dungeon and the hallways begin to get darker and darker. You panic and see a red button.";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "Do you click the red button or yell for help?";
+            b1.innerHTML= "Click the button";
+            b2.innerHTML= "Yell";
+        }
 
 
         /////State Machine
         function bclick(button) {
             if(state == "intro"){
                 if(button == 1){
-                    stayInSchool();
-                    state= "stayInSchool";
+                    explore();
+                    state= "explore";
                 }
                 else if(button == 2){
-                    goToCamp();
-                    state= "goToCamp";
+                    findHelp();
+                    state= "findHelp";
                 }
             }
-            else if(state == "stayInSchool"){
+            else if(state == "explore"){
                 if (button == 1){
-                    escape();
-                    state = "escape";
+                    openScroll();
+                    state = "openScroll";
                 }
                 else if(button == 2){
-                    intenseTraining();
-                    state = "intenseTraining";
+                    followPhoenix();
+                    state = "followPhoenix";
+                }
+            }
+            else if(state == "openScroll"){
+                if (button == 1){
+                    exploreTwo();
+                    state = "exploreTwo";
+                }
+                else if(button == 2){
+                    weep();
+                    state = "weep";
+                }
+            }
+            else if(state == "followPhoenix"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "weep"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "exploreTwo"){
+                if (button == 1){
+                    inquire();
+                    state = "inquire";
+                }
+                else if(button == 2){
+                    keepGoing();
+                    state = "keepGoing";
+                }
+            }
+            else if(state == "inquire"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "keepGoing"){
+                if (button == 1){
+                    clickButton();
+                    state = "clickButton";
+                }
+                else if(button == 2){
+                    help();
+                    state = "help";
                 }
             }
         }
