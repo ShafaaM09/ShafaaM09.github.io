@@ -34,7 +34,7 @@
                 color: white; 
                 position: absolute;
                 right: 0px; 
-                top: 20px; 
+                top: 0px; 
                 text-align:left;
         }
         #button_choices{
@@ -113,7 +113,7 @@
         intro();
 
         function intro(){
-            img.src = "images/caraval.jpg";
+            img.src = "images/planet.jpg";
             ptext1.innerHTML="While you are out on a trip to the store, you encounter a shiny necklace with a charm that looks like a C. You pick it up and suddenly you are transported Celestriaii, a planet in our galaxy.";
             ptext2.innerHTML="Do you explore the planet or immediately walk up to a Celestrian, hoping to find a way home?";
             ptext3.innerHTML="";
@@ -123,7 +123,7 @@
         }
 
         function explore(){
-            img.src = "images/refugee.jpg";
+            img.src = "images/phoenix.jpg";
             ptext1.innerHTML= "As you walk through the forest of Celestriaii, you feel as if there's someone watching you but brush it off. Suddenly, you spot a phoenix in the sky and it drops a scroll right on your head!";
             ptext2.innerHTML= "Do you wish to open the scroll or follow the phoenix?";
             ptext3.innerHTML= "";
@@ -139,7 +139,7 @@
             b2.style.display= "none";
         }
         function openScroll(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/hideout.jpg";
             ptext1.innerHTML= "The scroll says: 'Release the one wrongfully in despair and find the one of true evil who's a hidden spare'. The phoenix suddenly swoops down and keeps circling around you until you decide to follow it. The phoenix eventually leaves you at a hide out of some kind.";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "Do you stay and explore the hide out or weep forthe phoenix to come back?";
@@ -147,7 +147,7 @@
             b2.innerHTML= "Weep";
         }
         function exploreTwo(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/portal.jpg";
             ptext1.innerHTML= "You realize that inside the hideout is a portal! Excited to see where it leads to, you step inside. The portal teleports you to the dungeons in the capital where you notice a woman who wears a long garb in one of the cells.";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "Inquire about the lady in the garb or make your merry way down the dungeon?";
@@ -155,7 +155,7 @@
             b2.innerHTML= "Keep Going";
         }
         function weep(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/weep.jpg";
             ptext1.innerHTML= "The phoenix returns, shakes it's tiny head and leave you to cry as a coward. You're not the destined one. Better luck next time!";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "";
@@ -163,15 +163,15 @@
             b2.style.display= "none";
         }
         function inquire(){
-            img.src = "images/cinder.jpg";
-            ptext1.innerHTML= "You realize this lady is a Guardian, one of the protectors of the planet! She is indeed the one in wrongful despair. She informs you that her name is Maurii and Guardian Venoii banished her here because he wanted to get rid of any threat to his power. The Guardians are overjoyed to have Maurii back and strip Venoii of his status. You have fulfilled your destiny and restored piece!";
-            ptext2.innerHTML= "";
+            img.src = "images/books.jpg";
+            ptext1.innerHTML= "You realize this lady is a Guardian, one of the protectors of the planet! She is indeed the one in wrongful despair. She informs you that her name is Maurii and Guardian Venoii banished her here because he wanted to get rid of any threat to his power. After releasing her from the dungeons, the Guardians are overjoyed to have Maurii back and strip Venoii of his status. You have fulfilled your destiny and restored piece!";
+            ptext2.innerHTML= "Guardian Maurii sends you on your merry way back to Earth where you write a fictional book based on your experience. You eventually become a notable author and love to talk about your experience on Celestraii, even though everyone thinks your lying because you've been watching way too many sci-fi movies. The End!" ;
             ptext3.innerHTML= "";
             b1.style.display= "none";
             b2.style.display= "none";
         }
         function keepGoing(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/tunnel.jpg";
             ptext1.innerHTML= "You keep walking through the dungeon and the hallways begin to get darker and darker. You panic and see a red button.";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "Do you click the red button or yell for help?";
@@ -179,7 +179,7 @@
             b2.innerHTML= "Yell";
         }
         function clickButton(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/button.jpg";
             ptext1.innerHTML= "You click the red button and the ground opens beneath you. You keep falling for the rest of your life. Restart and be wiser!";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "";
@@ -187,7 +187,7 @@
             b2.style.display= "none";
         }
         function helpYell(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/door.jpg";
             ptext1.innerHTML= "You yell for help but no one comes. You decide to walk back to where you started, at the beginning of the dungeons. This time, you also notice a door decorated with seashells to the left of where you are. The lady in the garb is till there.";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "Do you wish to open the door or inquire about the woman in the garb?";
@@ -195,15 +195,15 @@
             b2.innerHTML= "Open the door";
         }
         function inquireTwo(){
-            img.src = "images/cinder.jpg";
-            ptext1.innerHTML= "You realize this lady is a Guardian, one of the protectors of the planet! She is indeed the 'one in wrongful despair'. She informs you that her name is Maurii and Guardian Venoii banished her here because he wanted to get rid of a powerful Guardian like her in order to take control. The Guardians are overjoyed to have Maurii back and strip Venoii of this status. You have fulfilled your destiny and restored piece!";
-            ptext2.innerHTML= "";
+            img.src = "images/earth.jpg";
+            ptext1.innerHTML= "You realize this lady is a Guardian, one of the protectors of the planet! She is indeed the 'one in wrongful despair'. She informs you that her name is Maurii and Guardian Venoii banished her here because he wanted to get rid of a powerful Guardian like her in order to take control. Once you release her from the dungeons, the Guardians are overjoyed to have Maurii back and strip Venoii of his status. You have fulfilled your destiny and restored piece!";
+            ptext2.innerHTML= "Guardian Maurii immediately sends you back home to Earth where you are overjoyed to see your family again! The rest of your life is now yours to spend how you want...good luck Chosen One!";
             ptext3.innerHTML= "";
             b1.style.display= "none";
             b2.style.display= "none";
         }
         function openDoor(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/war.jpg";
             ptext1.innerHTML= "Once you open the door, you end up teleporting back to Earth. You didn't fulfill your destiny and now Celestraii is in political distress. Good for you for finding a way home but you lost your chance to save Celestraii forever...";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "";
@@ -211,7 +211,7 @@
             b2.style.display= "none";
         }
         function findHelp(){
-            img.src = "images/cinder.jpg";
+            img.src = "images/guardian.jpg";
             ptext1.innerHTML= "An elderly civilian takes pity on you and leads you to the capitol where the Guardians are. He tells you that the Guardians are protectors of Celestraii and can most probably get you home, although they aren't the nicest at times. Once you reach the capitol, the elderly civilian points out a large painting of the Guardians outside the Great Hall, an area the Guardians inhabit. After staring at the painting for a few seconds, you look around and notice an entrance to the dungeons and to the Great Hall.";
             ptext2.innerHTML= "";
             ptext3.innerHTML= "Do you explore the dungeons or enter the Great Hall and walk up to the Guardiansin hopes of mercy?";
