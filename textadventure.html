@@ -237,6 +237,22 @@
             b1.style.display= "none";
             b2.style.display= "none";
         }
+        function ask(){
+            img.src = "images/cinder.jpg";
+            ptext1.innerHTML= "She informs you that she is Guardian Maurii and evil Guardian Venoii banished her here because he wanted to get rid of a powerful Guardian like her in order to take control of the planet. Once you release her from the dungeons, the Guardians are overjoyed to have Maurii back and strip Venoii of his status. You have fulfilled your destiny and restored piece!";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "The Guardians send you home free of charge because of your courage! Congratulations!";
+            b1.style.display= "none";
+            b2.style.display= "none";
+        }
+        function goBack(){
+            img.src = "images/cinder.jpg"; 
+            ptext1.innerHTML= "Once you reach the Great Hall, you nervously enter. The Guardians notice you immediately from their thrones and glare at you. They point one finger at you and motion you to plead your case. ";
+            ptext2.innerHTML= "";
+            ptext3.innerHTML= "After you finishing telling your tale, the Guardians become increasingly interested in listening to more of your stories. You were such a great storyteller that now the Guardians have chosen to keep you on Celestraii for their entertainment... Better luck next time!";
+            b1.style.display= "none";
+            b2.style.display= "none";
+        }
 
         /////State Machine
         function bclick(button) {
@@ -351,15 +367,27 @@
                     intro();
                     state = "intro";
                 }
-            }
+            } 
             else if(state == "dungeons"){
                 if (button == 1){
                     ask();
                     state = "ask";
                 }
-                else if(button == 2){
+                else if(button == 2){ 
                     goBack();
                     state = "goBack";
+                }
+            }
+            else if(state == "ask"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "goBack"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
                 }
             }
         }
