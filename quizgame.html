@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Home</title>
+
+        <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
     <body>
+        <ul class ="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="textadventure.html">Text Adventure</a></li>
+                    <li><a href="pythontext.html">Python Text Adventure</a></li>
+                    <li><a href="quizgame.html">Quiz Game GUI</a></li>
+                    <li><a href="#">Project 4</a></li>
+                    <li><a href="#">Project 5</a></li>
+                </ul>
+            </li> 
+        </ul>
+        <h1>Quiz Game GUI</h1>
         <iframe height="600px" width="90%" src="https://repl.it/@ShafaaMunjal/TriviaGame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
         <br></br>
         <h1>Video of Quiz Game:</h1>
-        <video width="420px" height="400px" controls>
-            <source src="QuizGame.mov" type="video/mov">
-        </video>
+            <video width="420px" height="400px" controls>
+                <source src="QuizGame.mov" type="video/mov">
+            </video>
         <h1>Response 3a:</h1>
         <h3 style="font-weight: normal;">The program quizzes the user on technological trivia and assigns them a score. 
             The user clicks on the button choice that correctly answers the question which leads to the score going up by 1. 
